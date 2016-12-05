@@ -1,6 +1,6 @@
 {
   "name": "bit-array-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Boolean arrays that can be serialized to and from base64.",
   "main": "BitArray.js",
   "scripts": {
