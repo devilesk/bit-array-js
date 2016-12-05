@@ -19,6 +19,7 @@ npm install bit-array-js
 # example
 
 ``` js
+var BitArray = require("bit-array-js");
 var a = new BitArray(8);
 a.set(1);                   // [false, false, false, true, false, false, false, false]
 a.value(3, true);           // [false, true, false, true, false, false, false, false]
