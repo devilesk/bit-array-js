@@ -1,0 +1,47 @@
+{
+  "name": "bit-array-js",
+  "version": "0.1.0",
+  "description": "Boolean arrays that can be serialized to and from base64.",
+  "main": "BitArray.js",
+  "scripts": {
+    "test": "mocha",
+    "browserify": "browserify BitArray.js -u btoa -u atob -s BitArray > dist/BitArray.js",
+    "uglify": "uglifyjs dist/BitArray.js > dist/BitArray.min.js",
+    "jshint": "jshint BitArray.js",
+    "clean": "rm -rf dist/*",
+    "build": "npm run clean && npm run jshint && npm run browserify && npm run uglify"
+  },
+  "author": "devilesk <devilesk@gmail.com> (http://devilesk.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "browserify-shim": "^3.8.12",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "uglify-js": "^2.7.5"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devilesk/bit-array-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devilesk/bit-array-js/issues"
+  },
+  "homepage": "https://github.com/devilesk/bit-array-js#readme",
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "atob": "global:atob",
+    "btoa": "global:btoa"
+  },
+  "dependencies": {
+    "atob": "^2.0.3",
+    "btoa": "^1.1.2"
+  }
+}
